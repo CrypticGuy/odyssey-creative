@@ -1,0 +1,114 @@
+/* Reset. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* splitsplitPanels. */
+.splitview {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.splitPanel {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+    .splitPanel .splitContent {
+        position: absolute;
+        width: 100vw;
+        min-height: 100%;
+        color: #FFF;
+    }
+
+    .splitPanel .description {
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .splitPanel img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(40%, -40%);
+        z-index: 100;
+    }
+
+
+.splitBottom {
+    background-color: rgb(44, 44, 44);
+    z-index: 1;
+}
+
+    .splitBottom .description {
+        right: 5%;
+    }
+
+.splitTop {
+    background-color: rgb(200, 200, 200);
+    z-index: 2;
+    width: 100vw;
+
+    /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+}
+
+
+/* Handle. */
+.handle {
+    height: 100%;
+    position: absolute;
+    
+    background-color: rgb(240, 240, 240);
+    width: 0;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+
+/* Skewed. */
+.skewed .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    transform-origin: top;
+}
+
+.skewed .splitTop {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .splitTop .splitContent {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
+
+/* Responsive. */
+@media (max-width: 900px) {
+    body {
+        font-size: 75%;
+    }
+    .skewed .splitTop .splitContent {
+        transform: skew(30deg);
+        margin-left: 1038px;
+    }
+}
