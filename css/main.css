@@ -336,6 +336,13 @@ input.input100 {
   line-height: 1;
 }
 
+.navArea .l1-txt3 {
+  font-family: Arial;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
 
 /*==================================================================
    SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
@@ -348,8 +355,8 @@ input.input100 {
 }
 
 .size2 {
-  width: 90px;
-  height: 90px;
+  min-width: 150px;
+  min-height: 90px;
 }
 
 .size3 {
@@ -396,6 +403,14 @@ input.input100 {
   background: -o-linear-gradient(-45deg, #b4b4b4, #e7e7e7, #d9d5e4);
   background: -moz-linear-gradient(-45deg, #b4b4b4, #e7e7e7, #d9d5e4);
   background: linear-gradient(-45deg, #b4b4b4, #e7e7e7, #d9d5e4);
+}
+
+.navArea .bg-g1 {
+  background: #7918f2;
+  background: -webkit-linear-gradient(-45deg, #6e0021, #7c0276, #6e1121);
+  background: -o-linear-gradient(-45deg, #6e0021, #7c0276, #6e1121);
+  background: -moz-linear-gradient(-45deg, #6e0021, #7c0276, #6e1121);
+  background: linear-gradient(-45deg, #6e0021, #7c0276, #6e1121);
 }
 
 .splitTop .bg-g1 {
@@ -465,6 +480,10 @@ input.input100 {
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+
+.navArea .how-btn {
+  border: 2px solid #fff;
 }
 
 .splitTop .how-btn {
